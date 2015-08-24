@@ -2077,8 +2077,8 @@ containing a value of this type.
         public static final int line3=0x7f0c009a;
         public static final int listMode=0x7f0c000a;
         public static final int list_item=0x7f0c0041;
+        public static final int logOutButton=0x7f0c00b0;
         public static final int login=0x7f0c0082;
-        public static final int logout=0x7f0c00b2;
         public static final int map=0x7f0c0068;
         public static final int mapButton=0x7f0c00a0;
         public static final int match_parent=0x7f0c0032;
@@ -2173,9 +2173,9 @@ containing a value of this type.
         public static final int tvRequestCity=0x7f0c007a;
         public static final int tvRequestValidity=0x7f0c007d;
         public static final int txtpassword=0x7f0c0080;
-        public static final int txtuser=0x7f0c00b1;
+        public static final int txtuser=0x7f0c00b2;
         public static final int txtusername=0x7f0c007e;
-        public static final int txtwelcome=0x7f0c00b0;
+        public static final int txtwelcome=0x7f0c00b1;
         public static final int up=0x7f0c0009;
         public static final int useLogo=0x7f0c0013;
         public static final int username=0x7f0c007f;

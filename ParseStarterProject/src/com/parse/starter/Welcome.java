@@ -1,6 +1,4 @@
 package com.parse.starter;
-import com.parse.ParseUser;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +6,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.parse.ParseUser;
 
 public class Welcome extends Activity {
 	
@@ -33,7 +33,7 @@ public class Welcome extends Activity {
 		txtuser.setText("You are logged in as " + struser);
 		
 		// Locate Button in welcome.xml
-		logout = (Button) findViewById(R.id.logout);
+		/*logout = (Button) findViewById(R.id.logout);
 
 		// Logout Button Click Listener
 		logout.setOnClickListener(new OnClickListener() {
@@ -42,8 +42,10 @@ public class Welcome extends Activity {
 				// Logout current user
 				ParseUser.logOut();
 				finish();
+				Intent backIntent = new Intent(Welcome.this,LoginSignupActivity.class );
+				Welcome.this.startActivity(backIntent);
 			}
-		});
+		}); */
 
 		enter = (Button) findViewById(R.id.enter);
 		enter.setOnClickListener(new OnClickListener() {

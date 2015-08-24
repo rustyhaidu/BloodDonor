@@ -23,19 +23,12 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:id="@+id/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/LogoutBtn"
-        android:layout_below="@+id/txtuser"
-        android:layout_centerHorizontal="true" />
-    <Button
         android:id="@+id/enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="EnterBtn"
-        android:layout_below="@+id/logout"
         android:layout_centerHorizontal="true"
-        android:onClick=""/>
+        android:onClick=""
+        android:layout_below="@+id/txtuser" />
 
 </RelativeLayout>

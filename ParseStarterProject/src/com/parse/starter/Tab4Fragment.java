@@ -2,6 +2,7 @@ package com.parse.starter;
 
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,11 +26,28 @@ import java.util.List;
 public class Tab4Fragment extends Fragment implements View.OnClickListener{
     private static final String TAG= "RegisterDonor";
 
+
+    /*logout = (Button) findViewById(R.id.logout);
+
+		// Logout Button Click Listener
+		logout.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View arg0) {
+				// Logout current user
+				ParseUser.logOut();
+				finish();
+				Intent backIntent = new Intent(Welcome.this,LoginSignupActivity.class );
+				Welcome.this.startActivity(backIntent);
+			}
+		}); */
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
        View view =  inflater.inflate(R.layout.tab4,container,false);
-        Button saveButton = (Button) view.findViewById(R.id.saveButton);
+       Button saveButton = (Button) view.findViewById(R.id.saveButton);
+       Button logout = (Button) view.findViewById(R.id.logOutButton);
+        logout.setOnClickListener(this);
         saveButton.setOnClickListener(this);
 
         return view;
@@ -113,6 +131,12 @@ public class Tab4Fragment extends Fragment implements View.OnClickListener{
             case R.id.saveButton:
                 onSave();
                 Toast.makeText(getActivity(), "Pressed", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.logOutButton:
+                ParseUser.logOut();
+                getActivity().finish();
+                Intent backIntent = new Intent(getActivity(),LoginSignupActivity.class );
+               getActivity().startActivity(backIntent);
                 break;
         }
     }

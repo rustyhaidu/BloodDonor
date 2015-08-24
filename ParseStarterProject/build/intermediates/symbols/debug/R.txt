@@ -631,8 +631,8 @@ int id line1 0x7f0c0096
 int id line3 0x7f0c009a
 int id listMode 0x7f0c000a
 int id list_item 0x7f0c0041
+int id logOutButton 0x7f0c00b0
 int id login 0x7f0c0082
-int id logout 0x7f0c00b2
 int id map 0x7f0c0068
 int id mapButton 0x7f0c00a0
 int id match_parent 0x7f0c0032
@@ -727,9 +727,9 @@ int id tvRequestBloodRH 0x7f0c007c
 int id tvRequestCity 0x7f0c007a
 int id tvRequestValidity 0x7f0c007d
 int id txtpassword 0x7f0c0080
-int id txtuser 0x7f0c00b1
+int id txtuser 0x7f0c00b2
 int id txtusername 0x7f0c007e
-int id txtwelcome 0x7f0c00b0
+int id txtwelcome 0x7f0c00b1
 int id up 0x7f0c0009
 int id useLogo 0x7f0c0013
 int id username 0x7f0c007f
