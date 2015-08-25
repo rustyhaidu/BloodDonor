@@ -8,8 +8,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
@@ -111,7 +113,9 @@ public class Tab4Fragment extends Fragment implements View.OnClickListener{
                         nameObj.put("City", ((EditText) getActivity().findViewById(R.id.city)).getText().toString());
                         nameObj.put("BloodGroup", ((EditText) getActivity().findViewById(R.id.blood_group)).getText().toString());
                         nameObj.put("RH", ((EditText) getActivity().findViewById(R.id.blood_rh)).getText().toString());
-                        nameObj.put("Type", ((EditText) getActivity().findViewById(R.id.etType)).getText().toString());
+
+                        nameObj.put("Type", ((Spinner) getActivity().findViewById(R.id.spType)).getSelectedItem().toString());
+
                         nameObj.put("Validity", ((EditText) getActivity().findViewById(R.id.etValidity)).getText().toString());
                         nameObj.saveInBackground();
                     }
@@ -174,14 +178,28 @@ public class Tab4Fragment extends Fragment implements View.OnClickListener{
                         EditText eCity = (EditText)getActivity().findViewById(R.id.city);
                         EditText eBloodGroup = (EditText)getActivity().findViewById(R.id.blood_group);
                         EditText eRH = (EditText)getActivity().findViewById(R.id.blood_rh);
-                        EditText eType = (EditText)getActivity().findViewById(R.id.etType);
+                       // EditText eType = (EditText)getActivity().findViewById(R.id.etType);
+                        Spinner sType = (Spinner)getActivity().findViewById(R.id.spType);
+
+                        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
+                                R.array.dooner_type, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+                        sType.setAdapter(adapter);
+
                         EditText eValidity = (EditText)getActivity().findViewById(R.id.etValidity);
 
                        eName.setText(p.getString("Name"));
                        eCity.setText(p.getString("City"));
                        eBloodGroup.setText(p.getString("BloodGroup"));
                        eRH.setText(p.getString("RH"));
-                       eType.setText(p.getString("Type"));
+
+                        for(int j= 0; j <sType.getAdapter().getCount(); j++) {
+                            if (sType.getAdapter().getItem(j).toString().contains(p.getString("Type"))) {
+                                sType.setSelection(j);
+                            }
+                        }
                        eValidity.setText(p.getString("Validity"));
 
 
