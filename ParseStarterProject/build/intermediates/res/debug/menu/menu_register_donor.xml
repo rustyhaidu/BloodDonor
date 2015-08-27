@@ -3,4 +3,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" android:showAsAction="never" />
 </menu>
-<!-- From: file:/C:/Users/Claudiu/Documents/BloodDonor/ParseStarterProject/res/menu/menu_register_donor.xml -->
+<!-- From: file:/C:/Users/claudiu.haidu/Documents/BloodDonor/ParseStarterProject/res/menu/menu_register_donor.xml -->

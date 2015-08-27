@@ -21,4 +21,4 @@ android:layout_height="match_parent">
     android:layout_toRightOf="@+id/center_address"/>
 
 
-</RelativeLayout><!-- From: file:/C:/Users/Claudiu/Documents/BloodDonor/ParseStarterProject/res/layout/center_list_item.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/claudiu.haidu/Documents/BloodDonor/ParseStarterProject/res/layout/center_list_item.xml -->

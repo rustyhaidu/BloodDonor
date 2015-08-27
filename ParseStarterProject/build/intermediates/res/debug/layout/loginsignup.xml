@@ -46,4 +46,4 @@
         android:layout_below="@+id/login"
         android:text="@string/SignupBtn" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Claudiu/Documents/BloodDonor/ParseStarterProject/res/layout/loginsignup.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/claudiu.haidu/Documents/BloodDonor/ParseStarterProject/res/layout/loginsignup.xml -->

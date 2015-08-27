@@ -31,7 +31,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name=".ParseApplication"
+        android:name="com.blooddonor.ParseApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -51,23 +51,23 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".ParseStarterProjectActivity"
+            android:name="com.blooddonor.ParseStarterProjectActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name=".MainActivityS"
+            android:name="com.blooddonor.MainActivityS"
             android:label="@string/title_activity_main_activity_s" >
         </activity>
         <activity
-            android:name=".Welcome"
+            android:name="com.blooddonor.Welcome"
             android:label="@string/title_activity_welcome" >
         </activity>
         <activity
-            android:name=".LoginSignupActivity"
+            android:name="com.blooddonor.LoginSignupActivity"
             android:label="@string/title_activity_login_signup" >
         </activity>
         <activity
-            android:name=".BloodDonorCentersActivity"
+            android:name="com.blooddonor.BloodDonorCentersActivity"
             android:label="@string/title_activity_blood_donor_centers" >
 
         </activity>
@@ -77,7 +77,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.blooddonor.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -86,7 +86,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MapsActivity">
+            android:name="com.blooddonor.MapsActivity">
 
         </activity>
     </application>

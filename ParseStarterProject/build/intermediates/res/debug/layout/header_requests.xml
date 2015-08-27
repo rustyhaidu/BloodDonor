@@ -30,4 +30,4 @@
         android:id="@+id/tvHeaderRequestValidity"
         android:layout_weight="1"/>
 
-</LinearLayout><!-- From: file:/C:/Users/Claudiu/Documents/BloodDonor/ParseStarterProject/res/layout/header_requests.xml -->
+</LinearLayout><!-- From: file:/C:/Users/claudiu.haidu/Documents/BloodDonor/ParseStarterProject/res/layout/header_requests.xml -->
