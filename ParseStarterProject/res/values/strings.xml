@@ -34,9 +34,21 @@
     <string name="LogoutBtn">Log Out</string>
     <string name="Welcome">Welcome!</string>
 
- <string-array name="dooner_type">
+ <string-array name="string_dooner_type">
   <item>donner</item>
   <item>requester</item>
+ </string-array>
+
+ <string-array name="stringRhType">
+  <item>pozitive</item>
+  <item>negative</item>
+
+ </string-array>
+ <string-array name="stringBloodGroup">
+  <item>01</item>
+  <item>A2</item>
+  <item>B3</item>
+  <item>AB4</item>
 
  </string-array>
 

@@ -111,8 +111,10 @@ public class Tab4Fragment extends Fragment implements View.OnClickListener{
                     {
                         nameObj.put("Name", ((EditText) getActivity().findViewById(R.id.name)).getText().toString());
                         nameObj.put("City", ((EditText) getActivity().findViewById(R.id.city)).getText().toString());
-                        nameObj.put("BloodGroup", ((EditText) getActivity().findViewById(R.id.blood_group)).getText().toString());
-                        nameObj.put("RH", ((EditText) getActivity().findViewById(R.id.blood_rh)).getText().toString());
+
+                        nameObj.put("BloodGroup", ((Spinner) getActivity().findViewById(R.id.spBlood_group)).getSelectedItem().toString());
+
+                        nameObj.put("RH", ((Spinner) getActivity().findViewById(R.id.spBlood_rh)).getSelectedItem().toString());
 
                         nameObj.put("Type", ((Spinner) getActivity().findViewById(R.id.spType)).getSelectedItem().toString());
 
@@ -176,24 +178,57 @@ public class Tab4Fragment extends Fragment implements View.OnClickListener{
 
                         EditText eName = (EditText)getActivity().findViewById(R.id.name);
                         EditText eCity = (EditText)getActivity().findViewById(R.id.city);
-                        EditText eBloodGroup = (EditText)getActivity().findViewById(R.id.blood_group);
-                        EditText eRH = (EditText)getActivity().findViewById(R.id.blood_rh);
+                        //EditText eBloodGroup = (EditText)getActivity().findViewById(R.id.blood_group);
+                        Spinner sBloodGroup = (Spinner)getActivity().findViewById(R.id.spBlood_group);
+
+                        ArrayAdapter<CharSequence> sBloodGroupAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
+                                R.array.stringBloodGroup, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+                        sBloodGroupAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+                        sBloodGroup.setAdapter(sBloodGroupAdapter);
+                        // EditText eType = (EditText)getActivity().findViewById(R.id.etType);
+                        //EditText eRH = (EditText)getActivity().findViewById(R.id.blood_rh);
+
+                        Spinner sRH = (Spinner)getActivity().findViewById(R.id.spBlood_rh);
+
+                        ArrayAdapter<CharSequence> sRHAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
+                                R.array.stringRhType, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+                        sRHAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+                        sRH.setAdapter(sRHAdapter);
                        // EditText eType = (EditText)getActivity().findViewById(R.id.etType);
+
                         Spinner sType = (Spinner)getActivity().findViewById(R.id.spType);
 
-                        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
-                                R.array.dooner_type, android.R.layout.simple_spinner_item);
+                        ArrayAdapter<CharSequence> sTypeAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
+                                R.array.string_dooner_type, android.R.layout.simple_spinner_item);
 // Specify the layout to use when the list of choices appears
-                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        sTypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner
-                        sType.setAdapter(adapter);
+                        sType.setAdapter(sTypeAdapter);
 
                         EditText eValidity = (EditText)getActivity().findViewById(R.id.etValidity);
 
                        eName.setText(p.getString("Name"));
                        eCity.setText(p.getString("City"));
-                       eBloodGroup.setText(p.getString("BloodGroup"));
-                       eRH.setText(p.getString("RH"));
+                       //eBloodGroup.setText(p.getString("BloodGroup"));
+
+                        for(int j= 0; j <sBloodGroup.getAdapter().getCount(); j++) {
+                            if (sBloodGroup.getAdapter().getItem(j).toString().contains(p.getString("BloodGroup"))) {
+                                sBloodGroup.setSelection(j);
+                            }
+                        }
+
+                        for(int j= 0; j <sRH.getAdapter().getCount(); j++) {
+                            if (sRH.getAdapter().getItem(j).toString().contains(p.getString("RH"))) {
+                                sRH.setSelection(j);
+                            }
+                        }
+                        eValidity.setText(p.getString("Validity"));
+
+                       //eRH.setText(p.getString("RH"));
 
                         for(int j= 0; j <sType.getAdapter().getCount(); j++) {
                             if (sType.getAdapter().getItem(j).toString().contains(p.getString("Type"))) {

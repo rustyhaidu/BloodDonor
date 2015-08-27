@@ -2,10 +2,21 @@
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <!-- From: file:/C:/Users/Claudiu/Documents/BloodDonor/ParseStarterProject/res/values/strings.xml -->
     <eat-comment/>
-    <string-array name="dooner_type">
+    <string-array name="stringBloodGroup">
+  <item>01</item>
+  <item>A2</item>
+  <item>B3</item>
+  <item>AB4</item>
+
+ </string-array>
+    <string-array name="stringRhType">
+  <item>pozitive</item>
+  <item>negative</item>
+
+ </string-array>
+    <string-array name="string_dooner_type">
   <item>donner</item>
   <item>requester</item>
-
  </string-array>
     <!-- From: file:/C:/Users/Claudiu/Documents/BloodDonor/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
