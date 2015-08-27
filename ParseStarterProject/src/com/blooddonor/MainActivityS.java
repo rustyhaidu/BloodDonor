@@ -1,4 +1,4 @@
-package com.parse.starter;
+package com.blooddonor;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -7,6 +7,8 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.parse.starter.R;
 
 /**
  * Created by claudiu.haidu on 8/6/2015.

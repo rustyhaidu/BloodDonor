@@ -1,4 +1,4 @@
-package com.parse.starter;
+package com.blooddonor;
 
 import android.content.Context;
 import android.location.LocationManager;
@@ -14,6 +14,7 @@ import com.parse.FindCallback;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.starter.R;
 
 import java.util.List;
 

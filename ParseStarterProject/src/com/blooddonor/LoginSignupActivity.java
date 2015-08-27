@@ -1,4 +1,4 @@
-package com.parse.starter;
+package com.blooddonor;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
+import com.parse.starter.R;
 
 public class LoginSignupActivity extends Activity {
 	// Declare Variables

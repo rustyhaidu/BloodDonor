@@ -1,4 +1,4 @@
-package com.parse.starter;
+package com.blooddonor;
 
 import android.app.Application;
 

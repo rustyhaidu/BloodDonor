@@ -1,5 +1,6 @@
-package com.parse.starter;
+package com.blooddonor;
 import com.parse.ParseUser;
+import com.parse.starter.R;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package com.parse.starter;
+package com.blooddonor;
 
 
 import android.app.Fragment;
@@ -16,6 +16,7 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
+import com.parse.starter.R;
 
 import java.util.List;
 

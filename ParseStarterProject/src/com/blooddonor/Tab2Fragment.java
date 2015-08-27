@@ -1,4 +1,4 @@
-package com.parse.starter;
+package com.blooddonor;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -14,41 +14,37 @@ import android.widget.TextView;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
+import com.parse.starter.R;
 
 import java.util.List;
 
 /**
  * Created by claudiu.haidu on 7/28/2015.
  */
-public class Tab3Fragment extends Fragment {
-    private ListView requestsView;
+public class Tab2Fragment extends Fragment  {
+    private ListView donnersView;
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)
-    {
-       // return (LinearLayout) inflater.inflate(R.layout.tab3,container,false);
-        View view = inflater.inflate(R.layout.tab3, container, false);
-       // View view_header = inflater.inflate(R.layout.header_requests, container, false);
-        //loadRequests();
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+       View view = inflater.inflate(R.layout.tab2, container, false);
+        loadOffers();
 
-        requestsView = (ListView) view.findViewById(R.id.requestsList);
-       // requestsView.addHeaderView(view_header);
+        donnersView = (ListView) view.findViewById(R.id.offersList);
         return view;
     }
     public void onResume(){
         super.onResume();
-        loadRequests();
+        loadOffers();
     }
 
-    private void loadRequests() {
+
+       private void loadOffers() {
 
         ParseQuery<BloodDonor> query = ParseQuery.getQuery("Donor");
        // query.whereExists("City");
        // query.whereExists("BloodGroup");
        // query.whereExists("RH");
-       // query.whereExists("Validity");
-       //  query.whereExists("Type");
-        query.whereEqualTo("Type","requester");
-
+        query.whereEqualTo("Type","donner");
+           //query.whereMatches("Type","donner");
 
         query.findInBackground(new FindCallback<BloodDonor>() {
 
@@ -60,8 +56,8 @@ public class Tab3Fragment extends Fragment {
 
                     BloodDonorAdapter adapter = new BloodDonorAdapter(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1,
                             list);
-                    requestsView.setAdapter(adapter);
-                    Log.e("List", "Success retrieving the blood requests list.", e);
+                    donnersView.setAdapter(adapter);
+                    Log.e("List", "Success retrieving the blood donors list.", e);
                 }
             }
         });
@@ -78,7 +74,7 @@ public class Tab3Fragment extends Fragment {
 
 
         public BloodDonorAdapter(Context context, int resource,
-                                 List<BloodDonor> objects) {
+                                  List<BloodDonor> objects) {
             super(context, resource, objects);
             mInflater = LayoutInflater.from(context);
             this.bloodDonors = objects;
@@ -89,12 +85,11 @@ public class Tab3Fragment extends Fragment {
             View view;
             ViewHolder holder;
             if (convertView == null) {
-                view = mInflater.inflate(R.layout.item_requests, parent, false);
+                view = mInflater.inflate(R.layout.item_offers, parent, false);
                 holder = new ViewHolder();
-                holder.city = (TextView) view.findViewById(R.id.tvRequestCity);
-                holder.bloodGroup = (TextView) view.findViewById(R.id.tvRequestBloodGroup);
-                holder.bloodRH = (TextView)view.findViewById(R.id.tvRequestBloodRH);
-                holder.Validity = (TextView)view.findViewById(R.id.tvRequestValidity);
+                holder.city = (TextView) view.findViewById(R.id.tvOfferCity);
+                holder.bloodGroup = (TextView) view.findViewById(R.id.tvOfferBloodGroup);
+                 holder.bloodRH = (TextView)view.findViewById(R.id.tvOfferBloodRH);
                 view.setTag(holder);
             } else {
                 view = convertView;
@@ -105,14 +100,14 @@ public class Tab3Fragment extends Fragment {
             holder.city.setText(blooddonor.getCity());
             holder.bloodGroup.setText(blooddonor.getBloodGroup());
             holder.bloodRH.setText(blooddonor.getRH());
-            holder.Validity.setText(blooddonor.getValidity());
 
             return view;
         }
 
         private class ViewHolder {
 
-            public TextView city, bloodGroup,bloodRH,Validity;
+            public TextView city, bloodGroup,bloodRH;
         }
     }
+
 }

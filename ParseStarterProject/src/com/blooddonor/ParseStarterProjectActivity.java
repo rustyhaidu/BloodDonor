@@ -1,7 +1,9 @@
-package com.parse.starter;
+package com.blooddonor;
 
 import android.app.Activity;
 import android.os.Bundle;
+
+import com.parse.starter.R;
 
 public class ParseStarterProjectActivity extends Activity {
 	private static final String TAG = "P";

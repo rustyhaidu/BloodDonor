@@ -1,4 +1,4 @@
-package com.parse.starter;
+package com.blooddonor;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
+import com.parse.starter.R;
 
 import java.util.List;
 
