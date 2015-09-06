@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tab4"
+
+    android:weightSum="1">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="328dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+
+        tools:context="com.parse.starter.RegisterDonor"
+        android:orientation="vertical"
+        android:id="@+id/relativeLayout">
+
+        <EditText android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:id="@+id/name"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/city"
+            android:layout_alignEnd="@+id/city"
+            android:layout_alignLeft="@+id/city"
+            android:layout_alignStart="@+id/city" />
+        <EditText android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="City"
+            android:id="@+id/city"
+            android:layout_below="@+id/name"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignLeft="@+id/spBlood_rh"
+            android:layout_alignStart="@+id/spBlood_rh" />
+
+        <Spinner android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spBlood_group"
+            android:hint="Blood Group"
+
+            android:layout_below="@+id/spType"
+            android:layout_toRightOf="@+id/textView4"
+            android:layout_toEndOf="@+id/textView4"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp" />
+
+        <Spinner android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spBlood_rh"
+            android:hint="RH"
+            android:layout_below="@+id/city"
+            android:layout_alignRight="@+id/spType"
+            android:layout_alignEnd="@+id/spType"
+            android:layout_alignLeft="@+id/spType"
+            android:layout_alignStart="@+id/spType" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Name"
+            android:id="@+id/textView"
+            android:layout_above="@+id/city"
+            android:layout_alignLeft="@+id/textView3"
+            android:layout_alignStart="@+id/textView3"
+            android:layout_alignRight="@+id/textView6"
+            android:layout_alignEnd="@+id/textView6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="City"
+            android:id="@+id/textView2"
+            android:layout_toEndOf="@+id/textView7"
+            android:layout_above="@+id/spBlood_rh"
+            android:layout_alignLeft="@+id/textView3"
+            android:layout_alignStart="@+id/textView3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="RH"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/textView2"
+            android:layout_toLeftOf="@+id/textView6"
+            android:layout_toStartOf="@+id/textView6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="BloodGroup"
+            android:id="@+id/textView4"
+            android:layout_below="@+id/spType"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Type"
+
+            android:id="@+id/textView7"
+            android:layout_alignBaseline="@+id/spType"
+            android:layout_alignBottom="@+id/spType"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/spBlood_group"
+            android:layout_toStartOf="@+id/spBlood_group" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Validity"
+            android:id="@+id/textView6"
+            android:layout_alignTop="@+id/etValidity"
+            android:layout_alignRight="@+id/textView4"
+            android:layout_alignEnd="@+id/textView4" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etValidity"
+            android:hint="Validity"
+            android:layout_below="@+id/spBlood_group"
+            android:layout_alignLeft="@+id/spBlood_group"
+            android:layout_alignStart="@+id/spBlood_group" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spType"
+            android:hint="Type"
+
+            android:layout_below="@+id/spBlood_rh"
+            android:layout_alignLeft="@+id/spBlood_group"
+            android:layout_alignStart="@+id/spBlood_group" />
+
+    </RelativeLayout>
+
+    <ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    </ScrollView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/saveButton"
+        android:padding="10dp"
+        android:text="Save"
+        android:onClick=""
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Out"
+        android:id="@+id/logOutButton"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>
